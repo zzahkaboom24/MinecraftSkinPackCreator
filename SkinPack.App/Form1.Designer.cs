@@ -71,6 +71,7 @@ namespace SkinPackCreator
             // menuStripMain
             // 
             this.menuStripMain.BackColor = System.Drawing.SystemColors.Window;
+            this.menuStripMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuNewMcpack,
             this.menuOpenMcpack,
@@ -79,28 +80,28 @@ namespace SkinPackCreator
             this.menuInstall});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStripMain.Size = new System.Drawing.Size(867, 24);
+            this.menuStripMain.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStripMain.Size = new System.Drawing.Size(1156, 30);
             this.menuStripMain.TabIndex = 0;
             // 
             // menuNewMcpack
             // 
             this.menuNewMcpack.Name = "menuNewMcpack";
-            this.menuNewMcpack.Size = new System.Drawing.Size(93, 20);
+            this.menuNewMcpack.Size = new System.Drawing.Size(113, 26);
             this.menuNewMcpack.Text = "New SkinPack";
             this.menuNewMcpack.Click += new System.EventHandler(this.MenuNewMcpack_Click);
             // 
             // menuOpenMcpack
             // 
             this.menuOpenMcpack.Name = "menuOpenMcpack";
-            this.menuOpenMcpack.Size = new System.Drawing.Size(98, 20);
+            this.menuOpenMcpack.Size = new System.Drawing.Size(119, 26);
             this.menuOpenMcpack.Text = "Open SkinPack";
             this.menuOpenMcpack.Click += new System.EventHandler(this.MenuOpenMcpack_Click);
             // 
             // menuOpenInstallFolder
             // 
             this.menuOpenInstallFolder.Name = "menuOpenInstallFolder";
-            this.menuOpenInstallFolder.Size = new System.Drawing.Size(96, 20);
+            this.menuOpenInstallFolder.Size = new System.Drawing.Size(118, 26);
             this.menuOpenInstallFolder.Text = "Installed Packs";
             this.menuOpenInstallFolder.Click += new System.EventHandler(this.MenuInstalledSkinPacks_Click);
             // 
@@ -112,7 +113,7 @@ namespace SkinPackCreator
             this.menuSave.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.menuSave.Name = "menuSave";
             this.menuSave.Padding = new System.Windows.Forms.Padding(0);
-            this.menuSave.Size = new System.Drawing.Size(38, 20);
+            this.menuSave.Size = new System.Drawing.Size(45, 26);
             this.menuSave.Text = "Save";
             this.menuSave.Click += new System.EventHandler(this.MenuSave_Click);
             // 
@@ -123,7 +124,7 @@ namespace SkinPackCreator
             this.menuInstall.ForeColor = System.Drawing.Color.White;
             this.menuInstall.Name = "menuInstall";
             this.menuInstall.Padding = new System.Windows.Forms.Padding(0);
-            this.menuInstall.Size = new System.Drawing.Size(121, 20);
+            this.menuInstall.Size = new System.Drawing.Size(150, 26);
             this.menuInstall.Text = "Export to Minecraft";
             this.menuInstall.Click += new System.EventHandler(this.MenuInstall_Click);
             // 
@@ -132,27 +133,31 @@ namespace SkinPackCreator
             this.listSkins.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listSkins.FormattingEnabled = true;
-            this.listSkins.Location = new System.Drawing.Point(25, 112);
+            this.listSkins.ItemHeight = 16;
+            this.listSkins.Location = new System.Drawing.Point(33, 138);
+            this.listSkins.Margin = new System.Windows.Forms.Padding(4);
             this.listSkins.Name = "listSkins";
-            this.listSkins.Size = new System.Drawing.Size(177, 316);
+            this.listSkins.Size = new System.Drawing.Size(235, 388);
             this.listSkins.TabIndex = 100;
             this.listSkins.SelectedIndexChanged += new System.EventHandler(this.ListSkins_SelectedIndexChanged);
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(357, 112);
+            this.labelName.Location = new System.Drawing.Point(476, 138);
+            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(59, 13);
+            this.labelName.Size = new System.Drawing.Size(73, 16);
             this.labelName.TabIndex = 0;
             this.labelName.Text = "Skin Name";
             // 
             // labelSkinList
             // 
             this.labelSkinList.AutoSize = true;
-            this.labelSkinList.Location = new System.Drawing.Point(25, 94);
+            this.labelSkinList.Location = new System.Drawing.Point(33, 116);
+            this.labelSkinList.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSkinList.Name = "labelSkinList";
-            this.labelSkinList.Size = new System.Drawing.Size(52, 13);
+            this.labelSkinList.Size = new System.Drawing.Size(63, 16);
             this.labelSkinList.TabIndex = 2;
             this.labelSkinList.Text = "Skins List";
             // 
@@ -162,100 +167,113 @@ namespace SkinPackCreator
             this.groupSettings.Controls.Add(this.textBoxPackName);
             this.groupSettings.Controls.Add(this.labelPackDescription);
             this.groupSettings.Controls.Add(this.labelPackName);
-            this.groupSettings.Location = new System.Drawing.Point(25, 31);
+            this.groupSettings.Location = new System.Drawing.Point(33, 38);
+            this.groupSettings.Margin = new System.Windows.Forms.Padding(4);
             this.groupSettings.Name = "groupSettings";
-            this.groupSettings.Size = new System.Drawing.Size(633, 50);
+            this.groupSettings.Padding = new System.Windows.Forms.Padding(4);
+            this.groupSettings.Size = new System.Drawing.Size(844, 62);
             this.groupSettings.TabIndex = 3;
             this.groupSettings.TabStop = false;
             this.groupSettings.Text = "General Settings";
             // 
             // textBoxPackDescription
             // 
-            this.textBoxPackDescription.Location = new System.Drawing.Point(327, 17);
+            this.textBoxPackDescription.Location = new System.Drawing.Point(436, 21);
+            this.textBoxPackDescription.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPackDescription.Name = "textBoxPackDescription";
-            this.textBoxPackDescription.Size = new System.Drawing.Size(289, 20);
+            this.textBoxPackDescription.Size = new System.Drawing.Size(384, 22);
             this.textBoxPackDescription.TabIndex = 20;
             // 
             // textBoxPackName
             // 
-            this.textBoxPackName.Location = new System.Drawing.Point(73, 17);
+            this.textBoxPackName.Location = new System.Drawing.Point(97, 21);
+            this.textBoxPackName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPackName.Name = "textBoxPackName";
-            this.textBoxPackName.Size = new System.Drawing.Size(144, 20);
+            this.textBoxPackName.Size = new System.Drawing.Size(191, 22);
             this.textBoxPackName.TabIndex = 10;
             // 
             // labelPackDescription
             // 
             this.labelPackDescription.AutoSize = true;
-            this.labelPackDescription.Location = new System.Drawing.Point(240, 20);
+            this.labelPackDescription.Location = new System.Drawing.Point(320, 25);
+            this.labelPackDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPackDescription.Name = "labelPackDescription";
-            this.labelPackDescription.Size = new System.Drawing.Size(88, 13);
+            this.labelPackDescription.Size = new System.Drawing.Size(109, 16);
             this.labelPackDescription.TabIndex = 1;
             this.labelPackDescription.Text = "Pack Description";
             // 
             // labelPackName
             // 
             this.labelPackName.AutoSize = true;
-            this.labelPackName.Location = new System.Drawing.Point(10, 20);
+            this.labelPackName.Location = new System.Drawing.Point(13, 25);
+            this.labelPackName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPackName.Name = "labelPackName";
-            this.labelPackName.Size = new System.Drawing.Size(63, 13);
+            this.labelPackName.Size = new System.Drawing.Size(78, 16);
             this.labelPackName.TabIndex = 0;
             this.labelPackName.Text = "Pack Name";
             // 
             // labelFormat
             // 
             this.labelFormat.AutoSize = true;
-            this.labelFormat.Location = new System.Drawing.Point(357, 138);
+            this.labelFormat.Location = new System.Drawing.Point(476, 170);
+            this.labelFormat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFormat.Name = "labelFormat";
-            this.labelFormat.Size = new System.Drawing.Size(39, 13);
+            this.labelFormat.Size = new System.Drawing.Size(49, 16);
             this.labelFormat.TabIndex = 0;
             this.labelFormat.Text = "Format";
             // 
             // labelTexture
             // 
             this.labelTexture.AutoSize = true;
-            this.labelTexture.Location = new System.Drawing.Point(357, 164);
+            this.labelTexture.Location = new System.Drawing.Point(476, 202);
+            this.labelTexture.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTexture.Name = "labelTexture";
-            this.labelTexture.Size = new System.Drawing.Size(62, 13);
+            this.labelTexture.Size = new System.Drawing.Size(77, 16);
             this.labelTexture.TabIndex = 0;
             this.labelTexture.Text = "Texture File";
             // 
             // labelType
             // 
             this.labelType.AutoSize = true;
-            this.labelType.Location = new System.Drawing.Point(357, 190);
+            this.labelType.Location = new System.Drawing.Point(476, 234);
+            this.labelType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(31, 13);
+            this.labelType.Size = new System.Drawing.Size(39, 16);
             this.labelType.TabIndex = 0;
             this.labelType.Text = "Type";
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(418, 105);
+            this.textBoxName.Location = new System.Drawing.Point(557, 129);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(172, 20);
+            this.textBoxName.Size = new System.Drawing.Size(228, 22);
             this.textBoxName.TabIndex = 50;
             this.textBoxName.LostFocus += new System.EventHandler(this.TextBoxName_LostFocus);
             // 
             // textBoxTexture
             // 
-            this.textBoxTexture.Location = new System.Drawing.Point(418, 157);
+            this.textBoxTexture.Location = new System.Drawing.Point(557, 193);
+            this.textBoxTexture.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTexture.Name = "textBoxTexture";
-            this.textBoxTexture.Size = new System.Drawing.Size(172, 20);
+            this.textBoxTexture.Size = new System.Drawing.Size(228, 22);
             this.textBoxTexture.TabIndex = 70;
             // 
             // textBoxType
             // 
             this.textBoxType.Enabled = false;
-            this.textBoxType.Location = new System.Drawing.Point(418, 183);
+            this.textBoxType.Location = new System.Drawing.Point(557, 225);
+            this.textBoxType.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxType.Name = "textBoxType";
-            this.textBoxType.Size = new System.Drawing.Size(172, 20);
+            this.textBoxType.Size = new System.Drawing.Size(228, 22);
             this.textBoxType.TabIndex = 90;
             // 
             // buttonBrowseSkin
             // 
-            this.buttonBrowseSkin.Location = new System.Drawing.Point(595, 157);
+            this.buttonBrowseSkin.Location = new System.Drawing.Point(793, 193);
+            this.buttonBrowseSkin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBrowseSkin.Name = "buttonBrowseSkin";
-            this.buttonBrowseSkin.Size = new System.Drawing.Size(63, 21);
+            this.buttonBrowseSkin.Size = new System.Drawing.Size(84, 26);
             this.buttonBrowseSkin.TabIndex = 80;
             this.buttonBrowseSkin.Text = "Browse";
             this.buttonBrowseSkin.UseVisualStyleBackColor = true;
@@ -266,33 +284,36 @@ namespace SkinPackCreator
             this.pictureBoxSkin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBoxSkin.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxSkin.Location = new System.Drawing.Point(357, 218);
+            this.pictureBoxSkin.Location = new System.Drawing.Point(476, 268);
+            this.pictureBoxSkin.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxSkin.Name = "pictureBoxSkin";
-            this.pictureBoxSkin.Size = new System.Drawing.Size(233, 236);
+            this.pictureBoxSkin.Size = new System.Drawing.Size(311, 290);
             this.pictureBoxSkin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxSkin.TabIndex = 9;
             this.pictureBoxSkin.TabStop = false;
             // 
             // statusLabel
             // 
+            this.statusLabel.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusLabel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatus});
-            this.statusLabel.Location = new System.Drawing.Point(0, 465);
+            this.statusLabel.Location = new System.Drawing.Point(0, 577);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-            this.statusLabel.Size = new System.Drawing.Size(867, 22);
+            this.statusLabel.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusLabel.Size = new System.Drawing.Size(1156, 22);
             this.statusLabel.TabIndex = 10;
             // 
             // toolStripStatus
             // 
             this.toolStripStatus.Name = "toolStripStatus";
-            this.toolStripStatus.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatus.Size = new System.Drawing.Size(0, 16);
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(207, 112);
+            this.buttonAdd.Location = new System.Drawing.Point(276, 138);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(61, 20);
+            this.buttonAdd.Size = new System.Drawing.Size(81, 25);
             this.buttonAdd.TabIndex = 30;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -300,29 +321,36 @@ namespace SkinPackCreator
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(207, 142);
+            this.buttonRemove.Location = new System.Drawing.Point(276, 175);
+            this.buttonRemove.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(61, 20);
+            this.buttonRemove.Size = new System.Drawing.Size(81, 25);
             this.buttonRemove.TabIndex = 40;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.ButtonRemove_Click);
-            //
+            // 
             // buttonMoveUp
-            //
-            this.buttonMoveUp.Location = new System.Drawing.Point(207, 172);
+            // 
+            this.buttonMoveUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.4F);
+            this.buttonMoveUp.Location = new System.Drawing.Point(276, 212);
+            this.buttonMoveUp.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMoveUp.Name = "buttonMoveUp";
-            this.buttonMoveUp.Size = new System.Drawing.Size(40, 40);
-            this.buttonMoveUp.TabIndex = 50;
+            this.buttonMoveUp.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonMoveUp.Size = new System.Drawing.Size(45, 35);
+            this.buttonMoveUp.TabIndex = 60;
             this.buttonMoveUp.Text = "▲";
             this.buttonMoveUp.UseVisualStyleBackColor = true;
             this.buttonMoveUp.Click += new System.EventHandler(this.ButtonMoveUp_Click);
-            //
+            // 
             // buttonMoveDown
-            //
-            this.buttonMoveDown.Location = new System.Drawing.Point(207, 222);
+            // 
+            this.buttonMoveDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.4F);
+            this.buttonMoveDown.Location = new System.Drawing.Point(276, 255);
+            this.buttonMoveDown.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMoveDown.Name = "buttonMoveDown";
-            this.buttonMoveDown.Size = new System.Drawing.Size(40, 40);
+            this.buttonMoveDown.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonMoveDown.Size = new System.Drawing.Size(45, 35);
             this.buttonMoveDown.TabIndex = 60;
             this.buttonMoveDown.Text = "▼";
             this.buttonMoveDown.UseVisualStyleBackColor = true;
@@ -335,9 +363,10 @@ namespace SkinPackCreator
             this.comboBoxFormat.Items.AddRange(new object[] {
             "geometry.humanoid.custom",
             "geometry.humanoid.customSlim"});
-            this.comboBoxFormat.Location = new System.Drawing.Point(418, 131);
+            this.comboBoxFormat.Location = new System.Drawing.Point(557, 161);
+            this.comboBoxFormat.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxFormat.Name = "comboBoxFormat";
-            this.comboBoxFormat.Size = new System.Drawing.Size(172, 21);
+            this.comboBoxFormat.Size = new System.Drawing.Size(228, 24);
             this.comboBoxFormat.TabIndex = 60;
             this.comboBoxFormat.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFormat_SelectedIndexChanged);
             // 
@@ -351,10 +380,10 @@ namespace SkinPackCreator
             this.buttonDonate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
             this.buttonDonate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDonate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDonate.Location = new System.Drawing.Point(590, 0);
+            this.buttonDonate.Location = new System.Drawing.Point(787, 0);
             this.buttonDonate.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDonate.Name = "buttonDonate";
-            this.buttonDonate.Size = new System.Drawing.Size(273, 24);
+            this.buttonDonate.Size = new System.Drawing.Size(364, 30);
             this.buttonDonate.TabIndex = 101;
             this.buttonDonate.Text = "Did you like it? Wanna buy me a cup of coffee?";
             this.buttonDonate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -364,9 +393,10 @@ namespace SkinPackCreator
             // buttonImportMultiple
             // 
             this.buttonImportMultiple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonImportMultiple.Location = new System.Drawing.Point(25, 434);
+            this.buttonImportMultiple.Location = new System.Drawing.Point(33, 534);
+            this.buttonImportMultiple.Margin = new System.Windows.Forms.Padding(4);
             this.buttonImportMultiple.Name = "buttonImportMultiple";
-            this.buttonImportMultiple.Size = new System.Drawing.Size(177, 20);
+            this.buttonImportMultiple.Size = new System.Drawing.Size(236, 25);
             this.buttonImportMultiple.TabIndex = 102;
             this.buttonImportMultiple.Text = "Import Multiple PNGs";
             this.buttonImportMultiple.UseVisualStyleBackColor = true;
@@ -374,9 +404,9 @@ namespace SkinPackCreator
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 487);
+            this.ClientSize = new System.Drawing.Size(1156, 599);
             this.Controls.Add(this.buttonImportMultiple);
             this.Controls.Add(this.buttonDonate);
             this.Controls.Add(this.comboBoxFormat);
@@ -398,6 +428,7 @@ namespace SkinPackCreator
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.listSkins);
             this.Controls.Add(this.menuStripMain);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Minecraft Skin Pack Creator for Bedrock Edition - v1.1.2";
             this.Load += new System.EventHandler(this.Form1_Load);
